@@ -1209,6 +1209,10 @@ input:focus {
   position: relative;
   padding: 88px 0px 75px 0px;
 }
+.transactions_top {
+  position: relative;
+  z-index: 3;
+}
 .transactions_top_left p {
   font-family: "Chronicle Display";
   font-weight: 325;
