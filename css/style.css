@@ -253,6 +253,17 @@ input:focus {
   opacity: 0;
 }
 
+.btn {
+  -webkit-transition: opacity 0.3s linear;
+  transition: opacity 0.3s linear;
+  opacity: 1;
+}
+.btn:hover {
+  opacity: 0.5;
+  -webkit-transition: opacity 0.3s linear;
+  transition: opacity 0.3s linear;
+}
+
 .header {
   position: absolute;
   left: 0px;
@@ -356,10 +367,20 @@ input:focus {
   line-height: 16px;
   text-transform: uppercase;
   color: #F9F7F4;
+  position: relative;
 }
-.header_nav ul li.active a {
-  -webkit-text-decoration-line: underline;
-          text-decoration-line: underline;
+.header_nav ul li.active a::after {
+  content: "";
+  width: 100%;
+  height: 1px;
+  position: absolute;
+  bottom: -1px;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+  transform: translateX(-50%);
+  background-color: #fff;
+  -webkit-transition: all 0.2s linear;
+  transition: all 0.2s linear;
 }
 .header_nav_drop {
   display: -webkit-box;
@@ -411,10 +432,20 @@ input:focus {
   color: #F9F7F4;
   opacity: 0.5;
   text-transform: none;
+  position: relative;
 }
-.header_nav_drop_content ul li.active a {
-  -webkit-text-decoration-line: underline;
-          text-decoration-line: underline;
+.header_nav_drop_content ul li.active a::after {
+  content: "";
+  width: 100%;
+  height: 1px;
+  position: absolute;
+  bottom: -1px;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+  transform: translateX(-50%);
+  background-color: #fff;
+  -webkit-transition: all 0.2s linear;
+  transition: all 0.2s linear;
 }
 @media (min-width: 1200px) {
   .header {
@@ -455,9 +486,38 @@ input:focus {
     line-height: 16px;
     text-transform: uppercase;
     color: #FFFFFF;
+    position: relative;
   }
-  .header_block ul li.active a {
-    text-decoration: underline;
+  .header_block ul li a::after {
+    content: "";
+    width: 0%;
+    height: 1px;
+    position: absolute;
+    bottom: -1px;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%);
+    background-color: #fff;
+    -webkit-transition: all 0.2s linear;
+    transition: all 0.2s linear;
+  }
+  .header_block ul li a:hover::after {
+    width: 100%;
+    -webkit-transition: all 0.2s linear;
+    transition: all 0.2s linear;
+  }
+  .header_block ul li.active a::after {
+    content: "";
+    width: 100%;
+    height: 1px;
+    position: absolute;
+    bottom: -1px;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%);
+    background-color: #fff;
+    -webkit-transition: all 0.2s linear;
+    transition: all 0.2s linear;
   }
   .header_block ul .drop {
     position: relative;
@@ -518,9 +578,20 @@ input:focus {
     opacity: 0.5;
     text-transform: none;
     text-decoration: none;
+    position: relative;
   }
-  .header_block ul .drop_body ul li.active a {
-    text-decoration: underline;
+  .header_block ul .drop_body ul li.active a::after {
+    content: "";
+    width: 100%;
+    height: 1px;
+    position: absolute;
+    bottom: -1px;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%);
+    background-color: #fff;
+    -webkit-transition: all 0.2s linear;
+    transition: all 0.2s linear;
   }
   .header_block ul .drop:hover .drop_down img {
     -webkit-transform: rotate(180deg);
@@ -528,8 +599,18 @@ input:focus {
     -webkit-transition: all 0.3s linear;
     transition: all 0.3s linear;
   }
-  .header_block ul .drop.active .drop_down span {
-    text-decoration: underline;
+  .header_block ul .drop.active .drop_down span::after {
+    content: "";
+    width: 100%;
+    height: 1px;
+    position: absolute;
+    bottom: -1px;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%);
+    background-color: #fff;
+    -webkit-transition: all 0.2s linear;
+    transition: all 0.2s linear;
   }
 }
 
@@ -878,6 +959,8 @@ input:focus {
   line-height: 42px;
   text-align: center;
   color: #003865;
+  -webkit-transform: translateY(3px);
+          transform: translateY(3px);
 }
 .price_block_item_box {
   -webkit-box-sizing: border-box;
@@ -2422,14 +2505,14 @@ input:focus {
   .calendly_block_scr {
     height: 660px;
     width: 1000px;
-    right: -150px;
+    right: -100px;
     left: auto;
     top: 45%;
     -webkit-transform: translateY(-50%);
             transform: translateY(-50%);
   }
   .calendly_block_text {
-    width: 408px;
+    width: 342px;
   }
   .calendly_block_text h2 {
     font-size: 40px;
@@ -2445,7 +2528,7 @@ input:focus {
 }
 @media (min-width: 1600px) {
   .calendly_block_text {
-    width: 478px;
+    width: 430px;
   }
   .calendly_block_text h2 {
     font-size: 50px;
@@ -2961,6 +3044,13 @@ input:focus {
   font-size: 14px;
   line-height: 16px;
   color: #535259;
+  -webkit-transition: color 0.3s linear;
+  transition: color 0.3s linear;
+}
+.footer_block_nav ul li a:hover {
+  -webkit-transition: color 0.3s linear;
+  transition: color 0.3s linear;
+  color: #D84E00;
 }
 .footer_block_date h5 {
   font-family: "Gilroy-Regular", sans-serif;
@@ -3005,6 +3095,13 @@ input:focus {
   line-height: 18px;
   color: #535259;
   margin-top: 15px;
+  -webkit-transition: color 0.3s linear;
+  transition: color 0.3s linear;
+}
+.footer_block_info a:hover {
+  -webkit-transition: color 0.3s linear;
+  transition: color 0.3s linear;
+  color: #D84E00;
 }
 .footer_block_info a img {
   margin-right: 10px;
